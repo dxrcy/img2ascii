@@ -13,7 +13,7 @@ pub fn image_to_ascii(image: DynamicImage, color: bool) -> String {
 
     // Loop every pixel in image
     let (image_width, image_height) = image.dimensions();
-    let mut output = String::new();
+    let mut output = String::with_capacity((image_width * image_height) as usize);
     for y in 0..image_height {
         if y > 0 {
             if color {
