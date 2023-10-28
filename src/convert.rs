@@ -1,12 +1,7 @@
 use image::{imageops::FilterType, DynamicImage, GenericImageView, Rgba};
 
 /// ASCII characters used to render image
-const CHAR_PALETTE: &[char] = &[
-    ' ', '.', '\'', '`', '^', '"', ',', ':', ';', 'I', 'l', '!', 'i', '>', '<', '~', '+', '_', '-',
-    '?', ']', '[', '}', '{', '1', ')', '(', '|', '\\', '/', 't', 'f', 'j', 'r', 'x', 'n', 'u', 'v',
-    'c', 'z', 'X', 'Y', 'U', 'J', 'C', 'L', 'Q', '0', 'O', 'Z', 'm', 'w', 'q', 'p', 'd', 'b', 'k',
-    'h', 'a', 'o', '*', '#', 'M', 'W', '&', '8', '%', 'B', '@', '$',
-];
+const CHAR_PALETTE: &[char] = &[' ', '.', ':', '-', '=', '+', '*', '#', '%', '@'];
 /// Minimum alpha value, for a pixel to be rendered in `color` mode (0-255)
 const MIN_ALPHA: u8 = 200;
 
